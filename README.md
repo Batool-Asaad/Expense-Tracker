@@ -134,6 +134,9 @@ Allowed categories: `Food`, `Transport`, `Bills`, `Entertainment`, `Other`.
 
 [Watch the demo video](https://drive.google.com/file/d/1Gvwm0Znak9EtPsKxkpptshJqeWFdFytj/view?usp=drive_link)
 
+## GitHub repo
+https://github.com/Batool-Asaad/Expense-Tracker
+
 ## What was the hardest part?
 
 The hardest part was making sure the data and the interface stayed synchronized. When I add, edit, or delete an expense, the table, the summary cards, and the chart all need to show the new data. To solve this, I made the server the single source of truth. After every add, edit, or delete, my code sends a request to the server and waits for it to confirm the change. Then it calls fetchExpenses(), which gets the full list again with a GET request. That one function redraws the table, recalculates the summary cards (total, count, and highest expense), and rebuilds the chart from the same data. I also had to destroy the old chart before drawing a new one, otherwise Chart.js shows an error. I learned that it is easier and safer to reload the data and redraw everything from one place than to update each part by hand.
