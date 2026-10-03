@@ -1,0 +1,283 @@
+:root {
+    --navy: #111827;
+    --bg: #f7f5f1;
+    --mint: #b9e8d6;
+    --yellow: #fff0bd;
+    --red: #f45d58;
+    --orange: #f6c95f;
+}
+
+body {
+    background: var(--bg);
+    color: var(--navy);
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+
+/* Page title */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+
+/* Cards */
+
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+
+/* Summary cards */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    height: 180px;
+}
+
+.summary-card:nth-child(1) {
+    background: var(--navy);
+    color: white;
+}
+
+.summary-card:nth-child(2) {
+    background: var(--mint);
+}
+
+.summary-card:nth-child(3) {
+    background: var(--yellow);
+}
+
+.summary-card .card-title {
+    color: inherit !important;
+    text-transform: uppercase;
+}
+
+.summary-value {
+    margin-top: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Chart */
+
+.chart-container {
+    height: 350px;
+}
+
+
+/* Forms */
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+}
+
+
+/* Buttons */
+
+.btn {
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: var(--navy);
+    border-color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: #273142;
+    border-color: #273142;
+}
+
+.btn-success {
+    background: #8ac9ad;
+    border-color: #8ac9ad;
+    color: var(--navy);
+}
+
+
+/* Table */
+
+.table-responsive {
+    border-radius: 20px;
+    background: white;
+}
+
+.table {
+    min-width: 700px;
+    margin: 0;
+}
+
+.table thead th {
+    background: var(--navy);
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.table thead .btn-link {
+    color: white;
+}
+
+.table tbody td {
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.table .badge {
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.table .btn-warning {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--navy);
+}
+
+.table .btn-danger {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.table .btn-warning,
+.table .btn-danger {
+    margin-right: 5px;
+}
+
+
+/* Modal */
+
+.modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* Dark mode */
+
+body.dark-mode {
+    background: #0d1421;
+    color: #f8fafc;
+}
+
+body.dark-mode .navbar {
+    background: #080e19 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .modal-content {
+    background: #172033;
+    color: #f8fafc;
+}
+
+body.dark-mode .summary-card:nth-child(1) {
+    background: #080e19;
+}
+
+body.dark-mode .summary-card:nth-child(2) {
+    background: #18372f;
+}
+
+body.dark-mode .summary-card:nth-child(3) {
+    background: #40371d;
+}
+
+body.dark-mode .form-label {
+    color: #cbd5e1;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #0f1725;
+    color: #f8fafc;
+    border-color: #39465a;
+}
+
+body.dark-mode .table-responsive {
+    background: #172033;
+}
+
+body.dark-mode .table {
+    --bs-table-bg: #172033;
+    --bs-table-color: #e5e7eb;
+    --bs-table-border-color: #2c3749;
+    --bs-table-striped-bg: #1d293b;
+    --bs-table-striped-color: #e5e7eb;
+    --bs-table-hover-bg: #263449;
+    --bs-table-hover-color: #fff;
+}
+
+body.dark-mode .table thead th {
+    background: #080e19;
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1);
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .summary-card {
+        height: 150px;
+    }
+
+    .summary-value {
+        margin-top: 20px;
+        font-size: 2.5rem;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .chart-container {
+        height: 280px;
+    }
+}
